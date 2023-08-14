@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    64.3deg,
+    rgb(254, 122, 153) 17.7%,
+    rgb(223, 170, 91) 64.7%,
+    rgba(26, 16, 211, 0.945) 112.1%
+  );
+
+  animation: ani 10s linear infinite;
+  background-size: 500%;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@keyframes ani {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+::placeholder {
+  color: white;
+}
+
+.container {
+  height: 600px;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 20px 10px;
+}
+.qrcode {
+  height: 45%;
+  width: 90%;
+  margin: auto;
+  border: 1px solid rgba(245, 245, 245, 0.459);
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+  position: relative;
+}
+.qr {
+  height: 220px;
+  width: 220px;
+  border-radius: 5px;
+  background-image: url(qr.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.box {
+  height: 50%;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#url {
+  width: 100%;
+  font-size: 25px;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.411);
+  background: none;
+  padding: 5px 20px;
+  outline: none;
+  color: white;
+}
+.buttons {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  padding: 10px 10px 10px 20px;
+}
+#color {
+  height: 50px;
+  width: 110px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.get {
+  height: 50px;
+  width: 120px;
+  border: none;
+  border-radius: 10px;
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+.download {
+  font-size: 30px;
+  padding: 10px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.224);
+  background-color: rgba(32, 196, 32, 0.84);
+  color: rgba(255, 255, 255, 0.829);
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.load {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  place-items: center;
+}
+.circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border-top: 3px solid rgba(255, 255, 255, 0.976);
+  animation: loader 1.5s ease-out infinite;
+}
+
+@keyframes loader {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qr Code</title>
+    <link rel="stylesheet" href="qr.css" />
+    <script type="module" src="qr.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+      integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="qrcode">
+        <div class="qr"></div>
+        <div class="load"><div class="circle"></div></div>
+      </div>
+      <form action="#" class="box">
+        <input type="url" id="url" required placeholder="Paste url here" />
+        <div class="buttons">
+          <input type="color" id="color" />
+          <div><button class="get" type="submit">Get</button></div>
+        </div>
+        <div><a href="" class="download">Download</a></div>
+      </form>
+    </div>
+  </body>
+</html>
