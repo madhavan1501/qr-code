@@ -8,7 +8,7 @@
 }
 
 body {
-  background: linear-gradient(
+  background: -webkit-linear-gradient(
     64.3deg,
     rgb(254, 122, 153) 17.7%,
     rgb(223, 170, 91) 64.7%,
